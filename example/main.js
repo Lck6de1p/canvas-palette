@@ -1,6 +1,6 @@
 import { Palette } from "../lib/index.esm.js";
 
-const palette = new Palette({ el: "#container" });
+const palette = new Palette({ el: "#container" ,color: "#003153"});
 palette.init();
 
 
