@@ -60,17 +60,17 @@ class Palette {
   }
   mouseDown(e: MouseEvent) {
     this.press = true;
-    this.getPen(e.pageX, e.pageY);
+    this.getPen(e.offsetX, e.offsetY);
   }
   mouseUp(e: MouseEvent) {
     this.press = false;
-    this.overPen(e.pageX, e.pageY);
+    this.overPen(e.offsetX, e.offsetY);
   }
   mouseMove(e: MouseEvent) {
     if (!this.press) {
       return;
     }
-    this.drawPen(e.pageX, e.pageY);
+    this.drawPen(e.offsetX, e.offsetY);
   }
   clean() {
     this.ctx.clearRect(0, 0, this.width, this.height);
